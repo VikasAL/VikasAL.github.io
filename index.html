@@ -1,420 +1,424 @@
-<style>
-  body{
-  background-color: #212121;
-  color: #e2e2e2;
-  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  /*letter-spacing: 0.02em;*/
-  margin:0px;
-  padding:0px;
-}
-.container{
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.left-col{
-  display:flex;
-  flex-direction: column;
-  padding-left: 5%;
-  flex: 1 0 0;
-}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            
+        body{
+            background-color: #212121;
+            color: #e2e2e2;
+            font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            /*letter-spacing: 0.02em;*/
+            margin:0px;
+            padding:0px;
+        }
+        .container{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .left-col{
+            display:flex;
+            flex-direction: column;
+            padding-left: 5%;
+            flex: 1 0 0;
+        }
+        
+        .right-col{
+            display:flex;
+            flex-direction: column;
+            padding-left :3%;
+            flex: 2 0 0;
+            background-color: #F0F0F0;
+            color:#212121;
+        }
+        .name h1{
+            text-align: center;
+            text-transform: uppercase;
+            color: RGB(59,166,216);
+        }
+        
+        .name h1 span:first-child{
+            letter-spacing: 0.1em;
+            font-weight: normal;
+        }
+        
+        .photo {
+            margin: 20px 0;
+            align-self: center;
+            width: 300px;
+        }
+        
+        .photo img{
+            border: 2px solid RGB(166, 170, 169);
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+        }
+        
+        h2{
+            text-transform: uppercase;
+            width: 90%;
+            font-size:1.8em;
+            color:RGB(59, 166, 216);
+            border-bottom: 2px solid RGB(166, 170, 169);
+        }
+        
+        ul{
+            margin-bottom: 0px;
+            list-style:none;
+            /*border: 1px solid white;*/
+            padding-left:2%;
+        }
+        ul li{
+            display:flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width:90%;
+        }
+        ul li i{
+            margin-right: 10px;
+            width:20px;
+            color: RGB(59, 166, 216);
+            font-size: 1.3em;
+        }
+        ul li p{
+            margin-top: 0px;
+        }
+        ul li p a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .bar{
+            
+            margin: 0px;
+            margin-left: auto;
+            border: 2px solid  RGB(59, 166, 216);
+            border-radius:8px;
+            width: 60%;
+            height: 15px;
+            overflow: hidde;
+        }
+        .slider{
+            width:80%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider1{
+            width:74%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        
+        .slider2{
+            width:90%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider3{
+            width:70%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider4{
+            width:35%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider5{
+            width:33%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider6{
+            width:20%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider7{
+            width:40%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        .slider8{
+            width:66%;
+            height:74%;
+            background-color: RGB(166,170,169);
+            border: 2px solid  rgba(0,0,0,0);
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+        
+        
+        
+        .education{
+            
+        }  
+        .header{
+            display: flex;
+            flex-direction: row;
+            align-items:  center;
+            width: 93%;
+        }
+        .header i{
+            margin-top:10px;
+            margin-right: 10px;
+            color: RGB(59, 166, 216);
+        }
+        
+        p.bold{
+            font-size:1.4em;
+            margin-bottom:9px;
+            font-weight: 600;
+        }
+        p.date{
+            margin-top: 5px;
+            font-size:1.2em;
+            margin-bottom: 50px;
+        }
+        
+        ul.main{
+            display:flex;
+            flex-flow: row wrap;
+            padding:0px;
+            margin-bottom: 0px;
+            list-style: none;
+        }
+        ul.main li{
+            width: 40%;
+        }
+        
+        ul.main li:nth-child(odd){
+            margin-right: 5%;
+        }
+        
+        ul.main li p{
+            margin-top: 0px;
+        }
+        
+        .main a{
+            text-decoration: none;
+            margin: auto;
+            width:50%;
+            border: 2px solid RGB(166, 170, 169);
+            text-align:center;
+            padding:0px;
+            color: inherit;
+            margin-bottom:50px;
+        }
+        .main a:hover{
+            background-color: #212121;
+            color: #e2e2e2;
+            border-color: #F0F0F0;
+        }
+        
+        .main a h3 {
+            margin:0px;
+            padding:20px;
+        }
+        
+        footer{
+            padding: 10px 0;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color:  RGB(59, 166, 216);
+        }
+        
+        a.icon { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:40px;
+            height:40px;
+            font-size: 25px;
+            margin: 0 5px;
+            color: #f0f0f0;
+            border: 2px solid #f0f0f0;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: background-color 0.2s ease-in; 
+        }
+        
+        a.icon:hover{
+            color: rgb(59, 166, 216);
+            background-color:  #f0f0f0;
+            transition: color 0.1s ease-in;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+    <div class="left-col">
 
-.right-col{
-  display:flex;
-  flex-direction: column;
-  padding-left :3%;
-  flex: 2 0 0;
-  background-color: #F0F0F0;
-  color:#212121;
-}
-.name h1{
-  text-align: center;
-  text-transform: uppercase;
-  color: RGB(59,166,216);
-}
-
-.name h1 span:first-child{
-  /*padding-left:0.3em;*/
-  letter-spacing: 0.2em;
-  font-weight: normal;
-}
-
-.photo {
-  margin: 20px 0;
-  align-self: center;
-  width: 250px;
-}
-
-.photo img{
-  border: 2px solid RGB(166, 170, 169);
-  overflow: hidde;
-  width: 100%;
-  height: auto;
-}
-
-h2{
-  text-transform: uppercase;
-  width: 90%;
-  font-size:1.8em;
-  color:RGB(59, 166, 216);
-  border-bottom: 2px solid RGB(166, 170, 169);
-}
-
-ul{
-  margin-bottom: 0px;
-  list-style:none;
-  /*border: 1px solid white;*/
-  padding-left:2%;
-}
-ul li{
-  display:flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width:90%;
-}
-ul li i{
-  margin-right: 10px;
-  width:20px;
-  color: RGB(59, 166, 216);
-  font-size: 1.3em;
-}
-ul li p{
-  margin-top: 0px;
-}
-ul li p a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.bar{
-  
-  margin: 0px;
-  margin-left: auto;
-  border: 2px solid  RGB(59, 166, 216);
-  border-radius:8px;
-  width: 60%;
-  height: 15px;
-  overflow: hidde;
-}
-.slider{
-  width:80%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider1{
-  width:74%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-
-.slider2{
-  width:90%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider3{
-  width:70%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider4{
-  width:35%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider5{
-  width:33%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider6{
-  width:20%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider7{
-  width:40%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-.slider8{
-  width:66%;
-  height:74%;
-  background-color: RGB(166,170,169);
-  border: 2px solid  rgba(0,0,0,0);
-  background-clip: padding-box;
-  border-radius: 6px;
-}
-
-
-
-.education{
-  
-}  
-.header{
-  display: flex;
-  flex-direction: row;
-  align-items:  center;
-  width: 93%;
-}
-.header i{
-  margin-top:10px;
-  margin-right: 10px;
-  color: RGB(59, 166, 216);
-}
-
-p.bold{
-  font-size:1.4em;
-  margin-bottom:9px;
-  font-weight: 600;
-}
-p.date{
-  margin-top: 5px;
-  font-size:1.2em;
-  margin-bottom: 50px;
-}
-
-ul.main{
-  display:flex;
-  flex-flow: row wrap;
-  padding:0px;
-  margin-bottom: 0px;
-  list-style: none;
-}
-ul.main li{
-  width: 40%;
-}
-
-ul.main li:nth-child(odd){
-  margin-right: 5%;
-}
-
-ul.main li p{
-  margin-top: 0px;
-}
-
-.main a{
-  text-decoration: none;
-  margin: auto;
-  width:50%;
-  border: 2px solid RGB(166, 170, 169);
-  text-align:center;
-  padding:0px;
-  color: inherit;
-  margin-bottom:50px;
-}
-.main a:hover{
-  background-color: #212121;
-  color: #e2e2e2;
-  border-color: #F0F0F0;
-}
-
-.main a h3 {
-  margin:0px;
-  padding:20px;
-}
-
-footer{
-  padding: 10px 0;
-  color: #f0f0f0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color:  RGB(59, 166, 216);
-}
-
-a.icon { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width:40px;
-  height:40px;
-  font-size: 25px;
-  margin: 0 5px;
-  color: #f0f0f0;
-  border: 2px solid #f0f0f0;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: background-color 0.2s ease-in; 
-}
-
-a.icon:hover{
-  color: rgb(59, 166, 216);
-  background-color:  #f0f0f0;
-  transition: color 0.1s ease-in;
-}
-
-
-</style>
-
-
-<div class="container">
-  <div class="left-col">
-
-    <div class="photo"><img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="photo" /></div>
-    <div class="name">
-      <h1><span>VIKAS</span><span> A L</span>
-      </h1>
+        <div class="photo"><img src="Vikas A L.jpg" alt="photo" /></div>
+        <div class="name">
+        <h1><span>VIKAS</span><span> A L</span>
+        </h1>
+        </div>
+        <div class="personalInfo">
+        <h2>personal info</h2>
+        <ul class="info">
+            <li><i class="fa fa-home "></i>
+            <p>Mangalore</p>
+            </li>
+            <li><i class="fa fa-phone"></i>
+            <p>(+91) 8971643272</p>
+            </li>
+            <li><i class="fa fa-envelope"></i>
+            <p>99vikasrao@gmail.com.com</p>
+            </li>
+            <!--<li><i class="fa fa-globe"></i>
+            <p><a href="#">www.xxxxx.xxx</a></p>
+            </li>-->
+        </ul>
+        </div>
+        <div class="language">
+        <h2>Language</h2>
+        <ul>
+            <li><i class="fa fa-language"></i>
+            <p>English</p>
+            <div class="bar">
+                <div class="slider1"></div>
+            </div>
+            </li>
+            <li><i class="fa fa-language"></i>
+            <p>Hindi</p>
+            <div class="bar">
+                <div class="slider"></div>
+            </div>
+            </li>
+            <li><i class="fa fa-language" aria-hidden="true"></i>
+            <p>Kannada</p>
+            <div class="bar">
+                <div class="slider2"></div>
+            </div>
+            </li>
+        </ul>
+        </div>
+        <div class="hobbies">
+        <h2>Hobbies / Interests</h2>
+        <ul>
+            <li><i class="fa fa-film"></i>
+            <p>Movies </p>
+            </li>
+            <li><i class="fa fa-bicycle"></i>
+            <p>Sports</p>
+            </li>
+            <li><i class="fa fa-cube"></i>
+            <p>Reading books</p>
+            </li>
+            <li><i class="fa fa-rocket"></i>
+            <p>Gaming</p>
+            </li>
+            <li><i class="fa fa-music"></i>
+            <p>Music</p>
+            </li>
+        </ul>
+        </div>
     </div>
-    <div class="personalInfo">
-      <h2>personal info</h2>
-      <ul class="info">
-        <li><i class="fa fa-home "></i>
-          <p>Mangalore</p>
-        </li>
-        <li><i class="fa fa-phone"></i>
-          <p>(+91) 8971643272</p>
-        </li>
-        <li><i class="fa fa-envelope"></i>
-          <p>vrao0899@gmail.com</p>
-        </li>
-        <!--<li><i class="fa fa-globe"></i>
-          <p><a href="#">www.xxxxx.xxx</a></p>
-        </li>-->
-      </ul>
-    </div>
-    <div class="language">
-      <h2>Language</h2>
-      <ul>
-        <li><i class="fa fa-language"></i>
-          <p>English</p>
-          <div class="bar">
-            <div class="slider1"></div>
-          </div>
-        </li>
-        <li><i class="fa fa-language"></i>
-          <p>Hindi</p>
-          <div class="bar">
-            <div class="slider"></div>
-          </div>
-        </li>
-         <li><i class="fa fa-language"></i>
-          <p>Kannada</p>
-          <div class="bar">
-            <div class="slider2"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="hobbies">
-      <h2>Hobbies / Interests</h2>
-      <ul>
-        <li><i class="fa fa-film"></i>
-          <p>Movies </p>
-        </li>
-        <li><i class="fa fa-bicycle"></i>
-          <p>Sports</p>
-        </li>
-        <li><i class="fa fa-cube"></i>
-          <p>Reading books</p>
-        </li>
-        <li><i class="fa fa-rocket"></i>
-          <p>Gaming</p>
-        </li>
-        <li><i class="fa fa-music"></i>
-          <p>Music</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="right-col">
-    <div class="education">
-      <div class="header">
-        <i class="fa fa-graduation-cap fa-3x"></i>
-        <h2>Education</h2>
-      </div>
-      <p class="bold">ALVA's Institute of Engineering and Technology 
-</p>
-      <p class="date">Computer science and Engineering <br>
-Currently studying</p>
-      
-      <p class="bold">SDM PU College Ujire
-</p>
-      <p class="date">2015 - 2017</p>
-    </div>
-   
-    <div class="skills">
-      <div class="header">
-        <i class="fa fa-code fa-3x"></i>
-        <h2>Programming Skills</h2>
-      </div>
-      <ul class="main">
-         <li>
-          <p>C </p>
-          <div class="bar">
-            <div class="slider3"></div>
-          </div>
-        </li>
-        <li>
-          <p>HTML</p>
-          <div class="bar">
-            <div class="slider4"></div>
-          </div>
-        </li>
-        <li>
-          <p>JavaScript</p>
-          <div class="bar">
-            <div class="slider5"></div>
-          </div>
-        </li>
-        <li>
-          <p>CSS</p>
-          <div class="bar">
-            <div class="slider6"></div>
-          </div>
-        </li>
-        <li>
-          <p>C++</p>
-          <div class="bar">
-            <div class="slider7"></div>
-          </div>
-        </li>
-        <li>
-          <p>JAVA</p>
-          <div class="bar">
-            <div class="slider8"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-   
+    <div class="right-col">
+        <div class="education">
+        <div class="header">
+            <i class="fa fa-graduation-cap fa-3x"></i>
+            <h2>Education</h2>
+        </div>
+        <p class="bold">ALVA's Institute of Engineering and Technology 
+    </p>
+        <p class="date">Computer science and Engineering <br>
+    Currently studying</p>
+        
+        <p class="bold">SDM PU College Ujire
+    </p>
+        <p class="date">2015 - 2017</p>
+        </div>
     
-  </div>
-</div>
-<footer>VIKAS A L.
-  <h4></h4>
-    <a class="icon" target="_blank" href="https://www.linkedin.com">
-      <i class="fa fa-linkedin"></i></a>
-    <a class="icon" target="_blank" href="https://github.com/accmail">
-      <i class="fa fa-github"></i></a>
-    <a class="icon" target="_blank" href="https://www.freecodecamp.com/accmail">
-      <i class="fa fa-free-code-camp"></i></a>
-</footer>
+        <div class="skills">
+        <div class="header">
+            <i class="fa fa-code fa-3x"></i>
+            <h2>Programming Skills</h2>
+        </div>
+        <ul class="main">
+            <li>
+            <p>C </p>
+            <div class="bar">
+                <div class="slider3"></div>
+            </div>
+            </li>
+            <li>
+            <p>HTML</p>
+            <div class="bar">
+                <div class="slider4"></div>
+            </div>
+            </li>
+            <li>
+            <p>JavaScript</p>
+            <div class="bar">
+                <div class="slider5"></div>
+            </div>
+            </li>
+            <li>
+            <p>CSS</p>
+            <div class="bar">
+                <div class="slider6"></div>
+            </div>
+            </li>
+            <li>
+            <p>C++</p>
+            <div class="bar">
+                <div class="slider7"></div>
+            </div>
+            </li>
+            <li>
+            <p>JAVA</p>
+            <div class="bar">
+                <div class="slider8"></div>
+            </div>
+            </li>
+        </ul>
+        </div>
+    
+        
+    </div>
+    </div>
+    <footer>VIKAS A L.
+    <h4></h4>
+        <a class="icon" target="_blank" href="https://www.linkedin.com/in/vikas-rao-5877b6173/">
+        <i class="fa fa-linkedin"></i></a>
+        <a class="icon" target="_blank" href="https://github.com/VikasAL">
+        <i class="fa fa-github"></i></a>
+        <a class="icon" target="_blank" href="https://www.instagram.com/v_i_c_k_y0_0/">
+        <i class="fa fa-instagram"></i></a>
+    </footer>
+    </body>
+</html>
+
